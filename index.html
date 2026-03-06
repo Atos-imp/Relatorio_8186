@@ -1,0 +1,2151 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(550px, 1fr)); gap: 25px; }
+        .card { background: #1e293b; border-radius: 15px; padding: 25px; border-top: 8px solid #334155; }
+        .nome-vendedor { font-size: 1.4rem; font-weight: bold; color: #f8fafc; }
+        .resumo-geral { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 20px 0; }
+        .mini-card-geral { background: #0f172a; padding: 15px; border-radius: 10px; border: 1px solid #334155; }
+        .barra-bg { background: #334155; height: 10px; border-radius: 5px; margin: 6px 0; position: relative; overflow: hidden; }
+        .barra-fill { height: 100%; border-radius: 5px; transition: width 1s; }
+        .depto-box { background: rgba(255,255,255,0.03); margin-top: 15px; padding: 15px; border-radius: 10px; border-left: 4px solid #38bdf8; }
+        .label-mini { font-size: 0.72rem; color: #94a3b8; display: flex; justify-content: space-between; font-weight: bold; margin-top: 8px; }
+        .valor-mini { font-size: 0.72rem; color: #cbd5e1; display: flex; justify-content: space-between; margin-top: 2px; }
+        .falta-txt { display: flex; justify-content: flex-end; margin-top: 1px; line-height: 1; }
+        .meta-txt { color: #64748b; font-weight: normal; font-size: 0.65rem; }
+        .secao-container { margin-left: 10px; margin-top: 15px; padding: 12px; background: rgba(0,0,0,0.25); border-radius: 8px; border: 1px dashed #334155; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; margin-bottom: 35px; color: #94a3b8;">📊 GESTÃO DE METAS RCA</h1>
+    <div class="grid">
+
+        <div class="card">
+            <div class="nome-vendedor">ACAILANDIA: ELIZABETHE MELO CAMPOS-FL3</div>
+            <small style="color: #64748b;">RCA: 2123</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>125.4%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 131,711.56</b></span> <span class="meta-txt">Meta: 105,000</span></div>
+                    <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>85.3%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:85.29411764705883%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>58 Cli</b></span> <span class="meta-txt">Meta: 68</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 10</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 0.00</span> <span class="meta-txt">Meta: 300</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 300.00</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>0 Clientes</span> <span class="meta-txt">Meta: 12</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 12</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>172.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 12,899.22</span> <span class="meta-txt">Meta: 7,500</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>112.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>74 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>74.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:74.08016666666666%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 4,444.81</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,555.19</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>103.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>31 Clientes</span> <span class="meta-txt">Meta: 30</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>163.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 16,323.99</span> <span class="meta-txt">Meta: 10,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>98.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:98.48484848484848%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>65 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 1</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>194.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 13,626.19</span> <span class="meta-txt">Meta: 7,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>64.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:64.58333333333334%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>62 Clientes</span> <span class="meta-txt">Meta: 96</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 34</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>139.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 31,119.87</span> <span class="meta-txt">Meta: 22,267</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>112.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>27 Clientes</span> <span class="meta-txt">Meta: 24</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>99.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:99.7144%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 14,957.16</span> <span class="meta-txt">Meta: 15,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 42.84</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>111.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>49 Clientes</span> <span class="meta-txt">Meta: 44</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>294.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 8,833.64</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>300.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>24 Clientes</span> <span class="meta-txt">Meta: 8</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CICOPAL</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>235.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 9,411.09</span> <span class="meta-txt">Meta: 4,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>79.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:79.16666666666666%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>38 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 10</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>74.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:74.48833333333333%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,234.65</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 765.35</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>38.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:38.333333333333336%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>23 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 37</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>117.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,530.18</span> <span class="meta-txt">Meta: 9,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>63.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:63.33333333333333%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>38 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 22</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>40.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:40.87860369151843%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 7,330.76</span> <span class="meta-txt">Meta: 17,933</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 10,602.24</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>27.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:27.083333333333332%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>13 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 35</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>100.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>6 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>40.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:40.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>58 / 145</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 87</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>25.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:25.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>3 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 9</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>30.5%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:30.5%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>122 / 400</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 278</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>33.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 4</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>22.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:22.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>33 / 150</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 117</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>44.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:44.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>22 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 28</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>70.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:70.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>35 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 15</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">IMPERATRIZ:LUCIANA CARVALHO BARRETO-FL3</div>
+            <small style="color: #64748b;">RCA: 2128</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>87.4%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:87.38498113207548%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 92,628.08</b></span> <span class="meta-txt">Meta: 106,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 13,371.92</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>83.6%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:83.63636363636363%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>46 Cli</b></span> <span class="meta-txt">Meta: 55</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 9</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>87.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:87.38498113207548%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 92,628.08</span> <span class="meta-txt">Meta: 106,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 13,371.92</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>106.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>64 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div></div>
+        <div class="card">
+            <div class="nome-vendedor">AMARANTE- ELIVALDO MARINHO BARROS-FL3</div>
+            <small style="color: #64748b;">RCA: 2117</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>76.0%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:75.98491304347826%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 52,429.59</b></span> <span class="meta-txt">Meta: 69,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 16,570.41</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>53.3%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:53.333333333333336%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>32 Cli</b></span> <span class="meta-txt">Meta: 60</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 28</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 0.00</span> <span class="meta-txt">Meta: 150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 150.00</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>0 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>55.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:55.258043478260866%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 5,083.74</span> <span class="meta-txt">Meta: 9,200</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,116.26</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>34.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:34.61538461538461%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>27 Clientes</span> <span class="meta-txt">Meta: 78</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 51</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>43.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:43.9110843373494%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,644.62</span> <span class="meta-txt">Meta: 8,300</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,655.38</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>41.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:41.66666666666667%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>20 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 28</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>162.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,538.09</span> <span class="meta-txt">Meta: 6,500</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>56.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:56.060606060606055%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>37 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 29</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>35.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:35.34157894736842%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,357.45</span> <span class="meta-txt">Meta: 9,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 6,142.55</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>34.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:34.72222222222222%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>25 Clientes</span> <span class="meta-txt">Meta: 72</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 47</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>27.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:27.168875000000003%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,173.51</span> <span class="meta-txt">Meta: 8,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 5,826.49</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>13.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:13.333333333333334%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>4 Clientes</span> <span class="meta-txt">Meta: 30</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 26</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>54.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:54.832727272727276%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,015.80</span> <span class="meta-txt">Meta: 5,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,484.20</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>27.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:27.659574468085108%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>13 Clientes</span> <span class="meta-txt">Meta: 47</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 34</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>89.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:89.17500000000001%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 891.75</span> <span class="meta-txt">Meta: 1,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 108.25</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>100.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>5 Clientes</span> <span class="meta-txt">Meta: 5</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>17.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:17.90233333333333%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 537.07</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,462.93</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>10.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>6 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 54</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>46.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:46.10068376068376%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,696.89</span> <span class="meta-txt">Meta: 5,850</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,153.11</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>16.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>10 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>170.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 20,490.67</span> <span class="meta-txt">Meta: 12,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>37.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:37.5%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>18 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 30</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>66.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:66.66666666666666%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>4 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 2</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>60.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:60.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>63 / 105</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 42</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>108.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>13 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>292.4%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>658 / 225</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 75</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 45</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 45</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>6.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:6.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>3 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 47</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">ACAILANDIA: SARA HELI DE SOUSA LOPES-FL3</div>
+            <small style="color: #64748b;">RCA: 2107</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>74.9%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:74.8630625%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 59,890.45</b></span> <span class="meta-txt">Meta: 80,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 20,109.55</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>63.1%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:63.07692307692307%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>41 Cli</b></span> <span class="meta-txt">Meta: 65</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 24</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 0.00</span> <span class="meta-txt">Meta: 150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 150.00</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>0 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>107.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,790.82</span> <span class="meta-txt">Meta: 10,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>76.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:76.25%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>61 Clientes</span> <span class="meta-txt">Meta: 80</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 19</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>43.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:43.49166666666667%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,609.50</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,390.50</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>45.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:45.45454545454545%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>25 Clientes</span> <span class="meta-txt">Meta: 55</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 30</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>108.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,276.57</span> <span class="meta-txt">Meta: 9,500</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>60.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:60.9375%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>39 Clientes</span> <span class="meta-txt">Meta: 64</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 25</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>17.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:17.131411764705884%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 1,456.17</span> <span class="meta-txt">Meta: 8,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 7,043.83</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>30.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:30.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>15 Clientes</span> <span class="meta-txt">Meta: 50</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 35</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>128.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 14,096.19</span> <span class="meta-txt">Meta: 11,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>50.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:50.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>15 Clientes</span> <span class="meta-txt">Meta: 30</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 15</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>80.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:80.78866666666667%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 6,059.15</span> <span class="meta-txt">Meta: 7,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,440.85</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>46.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:46.875%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>30 Clientes</span> <span class="meta-txt">Meta: 64</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 34</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>140.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 7,021.70</span> <span class="meta-txt">Meta: 5,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>400.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>20 Clientes</span> <span class="meta-txt">Meta: 5</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>11.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:11.787%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 353.61</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,646.39</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>10.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>5 Clientes</span> <span class="meta-txt">Meta: 50</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 45</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>71.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:71.57310344827586%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,113.43</span> <span class="meta-txt">Meta: 4,350</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,236.57</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>28.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:28.000000000000004%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>14 Clientes</span> <span class="meta-txt">Meta: 50</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 36</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>55.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:55.455466666666666%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 8,318.32</span> <span class="meta-txt">Meta: 15,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 6,681.68</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>46.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:46.2962962962963%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>25 Clientes</span> <span class="meta-txt">Meta: 54</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 29</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>33.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>4 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 8</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>50.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:50.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>50 / 100</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>66.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:66.66666666666666%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>8 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 4</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>52.5%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:52.470588235294116%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>223 / 425</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 202</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>100.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>6 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>46.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:46.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>23 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 27</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>33.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 4</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>6.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:6.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>3 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 47</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>2.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>1 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 49</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>50.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:50.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>3 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 3</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>80.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:80.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>20 / 25</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>2.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>1 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 49</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">BURITICUPU: VITOR GABRIEL DA C SILVA</div>
+            <small style="color: #64748b;">RCA: 2118</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>73.7%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:73.70384285714286%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 51,592.69</b></span> <span class="meta-txt">Meta: 70,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 18,407.31</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>43.1%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:43.07692307692308%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>28 Cli</b></span> <span class="meta-txt">Meta: 65</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 37</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>30.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:29.993333333333332%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 44.99</span> <span class="meta-txt">Meta: 150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 105.01</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>5.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:5.555555555555555%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>1 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 17</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>70.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:69.97693318991276%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 5,854.97</span> <span class="meta-txt">Meta: 8,367</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,512.03</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>24.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:24.358974358974358%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>19 Clientes</span> <span class="meta-txt">Meta: 78</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 59</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>97.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:97.123%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 5,827.38</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 172.62</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>47.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:47.91666666666667%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>23 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 25</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>69.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:69.5774358974359%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 12,210.84</span> <span class="meta-txt">Meta: 17,550</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 5,339.16</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>56.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:56.060606060606055%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>37 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 29</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>110.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 4,141.79</span> <span class="meta-txt">Meta: 3,750</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>19.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:19.444444444444446%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>14 Clientes</span> <span class="meta-txt">Meta: 72</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 58</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>4889.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 488.99</span> <span class="meta-txt">Meta: 10</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>200.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 1</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>105.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 8,399.17</span> <span class="meta-txt">Meta: 8,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>46.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:46.808510638297875%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>22 Clientes</span> <span class="meta-txt">Meta: 47</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 25</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>251.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,053.99</span> <span class="meta-txt">Meta: 4,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>320.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>16 Clientes</span> <span class="meta-txt">Meta: 5</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>120.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,611.83</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>13.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:13.333333333333334%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>8 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 52</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>17.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:17.389672483863254%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 727.41</span> <span class="meta-txt">Meta: 4,183</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,455.59</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>23.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:23.333333333333332%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>14 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 46</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>1.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:1.5421999999999998%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 231.33</span> <span class="meta-txt">Meta: 15,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 14,768.67</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>4.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:4.166666666666666%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 46</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 55</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 55</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 12</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 425</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 425</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>24.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:24.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>12 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 38</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>4.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>2 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 48</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 75</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 45</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 45</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">IMPERATRIZ: EVANDRO SILVA VITAL-FL3</div>
+            <small style="color: #64748b;">RCA: 2115</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>68.8%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:68.75479999999999%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 75,630.28</b></span> <span class="meta-txt">Meta: 110,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 34,369.72</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>81.9%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:81.94444444444444%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>59 Cli</b></span> <span class="meta-txt">Meta: 72</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 13</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>52.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:52.39999999999999%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 157.20</span> <span class="meta-txt">Meta: 300</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 142.80</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>11.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:11.11111111111111%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 16</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>80.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:80.81985714285715%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 11,314.78</span> <span class="meta-txt">Meta: 14,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,685.22</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>83.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:83.33333333333334%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>85 Clientes</span> <span class="meta-txt">Meta: 102</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 17</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>29.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:29.403000000000002%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,940.30</span> <span class="meta-txt">Meta: 10,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 7,059.70</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>45.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:45.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>27 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 33</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>159.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 25,586.88</span> <span class="meta-txt">Meta: 16,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>159.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>115 Clientes</span> <span class="meta-txt">Meta: 72</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>32.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:32.476400000000005%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 1,623.82</span> <span class="meta-txt">Meta: 5,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,376.18</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>15.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:15.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>9 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 51</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>69.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:69.68486666666668%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 10,452.73</span> <span class="meta-txt">Meta: 15,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,547.27</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>38.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:38.88888888888889%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>14 Clientes</span> <span class="meta-txt">Meta: 36</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 22</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>20.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:19.970516129032255%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,095.43</span> <span class="meta-txt">Meta: 15,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 12,404.57</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>12.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:12.903225806451612%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>8 Clientes</span> <span class="meta-txt">Meta: 62</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 54</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>40.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:40.850500000000004%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,451.03</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,548.97</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>30.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:30.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>3 Clientes</span> <span class="meta-txt">Meta: 10</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 7</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>17.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:17.2785%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 691.14</span> <span class="meta-txt">Meta: 4,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,308.86</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>5.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:5.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>3 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 57</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>8.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:8.334375%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 666.75</span> <span class="meta-txt">Meta: 8,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 7,333.25</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>8.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:8.333333333333332%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>5 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 55</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>102.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 16,650.22</span> <span class="meta-txt">Meta: 16,200</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>34.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:34.523809523809526%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>29 Clientes</span> <span class="meta-txt">Meta: 84</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 55</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>83.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:83.33333333333334%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>5 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 1</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>80.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:80.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>48 / 60</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 12</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>141.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>17 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>124.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>372 / 300</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 10</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>248.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>186 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>22.2%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:22.22222222222222%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>4 / 18</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 14</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>20.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:20.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>15 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 60</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>5.6%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.555555555555555%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 18</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 17</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>48.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:48.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>24 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 26</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 12</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 200</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 200</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">IMPERATRIZ:DIOGO GUIMARAES SANTOS-FL3</div>
+            <small style="color: #64748b;">RCA: 2121</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>67.7%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:67.682234375%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 43,316.63</b></span> <span class="meta-txt">Meta: 64,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 20,683.37</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>68.0%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:68.0%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>51 Cli</b></span> <span class="meta-txt">Meta: 75</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 24</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 0.00</span> <span class="meta-txt">Meta: 150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 150.00</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>0 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>45.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:45.030895522388064%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,017.07</span> <span class="meta-txt">Meta: 6,700</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,682.93</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>62.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:62.82051282051282%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>49 Clientes</span> <span class="meta-txt">Meta: 78</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 29</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>22.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:22.443898305084748%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 1,324.19</span> <span class="meta-txt">Meta: 5,900</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,575.81</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>33.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>12 Clientes</span> <span class="meta-txt">Meta: 36</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 24</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>153.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 9,344.43</span> <span class="meta-txt">Meta: 6,100</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>72.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:72.72727272727273%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>48 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>261.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 13,063.67</span> <span class="meta-txt">Meta: 5,000</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>51.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:51.041666666666664%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>49 Clientes</span> <span class="meta-txt">Meta: 96</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 47</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>77.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:77.71625%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 9,325.95</span> <span class="meta-txt">Meta: 12,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,674.05</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>62.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:62.5%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>15 Clientes</span> <span class="meta-txt">Meta: 24</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 9</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>40.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:40.07971428571429%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,805.58</span> <span class="meta-txt">Meta: 7,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,194.42</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>47.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:47.05882352941176%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>24 Clientes</span> <span class="meta-txt">Meta: 51</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 27</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>95.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:95.09899999999999%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,852.97</span> <span class="meta-txt">Meta: 3,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 147.03</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>113.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>17 Clientes</span> <span class="meta-txt">Meta: 15</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>25.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:25.9225%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 518.45</span> <span class="meta-txt">Meta: 2,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,481.55</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>10.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>6 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 54</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>21.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:21.7055421686747%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 900.78</span> <span class="meta-txt">Meta: 4,150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,249.22</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>21.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:21.666666666666668%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>13 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 47</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>1.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:1.3628333333333333%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 163.54</span> <span class="meta-txt">Meta: 12,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 11,836.46</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>3.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:3.7037037037037033%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 54</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 52</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 12</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 125</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 125</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 10</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>4.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.666666666666667%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>7 / 150</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 143</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 100</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 100</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 75</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">IMPERATRIZ:RHUDSON BARROS RAMALHO</div>
+            <small style="color: #64748b;">RCA: 2116</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>59.4%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:59.41107936507937%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 37,428.98</b></span> <span class="meta-txt">Meta: 63,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 25,571.02</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>40.0%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:40.0%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>24 Cli</b></span> <span class="meta-txt">Meta: 60</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 36</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 0.00</span> <span class="meta-txt">Meta: 150</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 150.00</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>0.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>0 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>34.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:34.34432098765432%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,781.89</span> <span class="meta-txt">Meta: 8,100</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 5,318.11</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>62.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:62.5%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>25 Clientes</span> <span class="meta-txt">Meta: 40</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 15</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>49.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:49.905116279069766%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,145.92</span> <span class="meta-txt">Meta: 4,300</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,154.08</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>85.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:85.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>17 Clientes</span> <span class="meta-txt">Meta: 20</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 3</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>190.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 11,163.94</span> <span class="meta-txt">Meta: 5,850</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>102.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>37 Clientes</span> <span class="meta-txt">Meta: 36</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>47.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:47.35187878787879%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,906.53</span> <span class="meta-txt">Meta: 8,250</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 4,343.47</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>20.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:20.833333333333336%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>10 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 38</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>6.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:6.4805%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 388.83</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 5,611.17</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>12.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:12.5%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 16</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 14</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>35.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:35.274%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,116.44</span> <span class="meta-txt">Meta: 6,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,883.56</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>37.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:37.142857142857146%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>13 Clientes</span> <span class="meta-txt">Meta: 35</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 22</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>19.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:19.1328%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 478.32</span> <span class="meta-txt">Meta: 2,500</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,021.68</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>40.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:40.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 5</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 3</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>4.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:4.8229999999999995%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 192.92</span> <span class="meta-txt">Meta: 4,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,807.08</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>6.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:6.666666666666667%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>2 Clientes</span> <span class="meta-txt">Meta: 30</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 28</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>49.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:49.56659793814433%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 2,403.98</span> <span class="meta-txt">Meta: 4,850</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,446.02</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>16.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>4 Clientes</span> <span class="meta-txt">Meta: 24</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 20</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>91.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:91.15546153846155%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 11,850.21</span> <span class="meta-txt">Meta: 13,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,149.79</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>33.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>14 Clientes</span> <span class="meta-txt">Meta: 42</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 28</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>50.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:50.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>3 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 3</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>52.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:52.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>39 / 75</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 36</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>116.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>7 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>111.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>363 / 325</span></div>
+                        <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>32.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:32.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>16 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 34</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>33.3%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:33.33333333333333%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 4</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>48.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:48.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>24 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 26</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>14.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:14.000000000000002%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>7 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 43</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+                    </div>
+                </div></div></div>
+        <div class="card">
+            <div class="nome-vendedor">P.FRANCO: IVANA CARLA DA SILVA-FL3</div>
+            <small style="color: #64748b;">RCA: 2124</small>
+
+            <div class="resumo-geral">
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#38bdf8; margin-top:0;"><span>💰 FINANCEIRO (LÍQ)</span> <span>55.0%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:54.99357534246576%; background:#38bdf8;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>R$ 40,145.31</b></span> <span class="meta-txt">Meta: 73,000</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 32,854.69</span></div>
+                </div>
+                <div class="mini-card-geral">
+                    <div class="label-mini" style="color:#4ade80; margin-top:0;"><span>👥 POSITIV. (LÍQ)</span> <span>57.1%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:57.14285714285714%; background:#4ade80;"></div></div>
+                    <div class="valor-mini"><span>Fez: <b>40 Cli</b></span> <span class="meta-txt">Meta: 70</span></div>
+                    <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 30</span></div>
+                </div>
+            </div>
+    
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">LAMPADAS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>12.4%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:12.410526315789474%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 23.58</span> <span class="meta-txt">Meta: 190</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 166.42</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>5.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:5.555555555555555%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>1 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 17</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI ATAC</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>73.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:73.74475000000001%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 5,899.58</span> <span class="meta-txt">Meta: 8,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,100.42</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>129.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>62 Clientes</span> <span class="meta-txt">Meta: 48</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI GELATINA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>67.1%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:67.06195426195426%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,225.68</span> <span class="meta-txt">Meta: 4,810</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 1,584.32</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>66.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:66.66666666666666%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>40 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 20</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">DORI SM</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>136.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 7,477.34</span> <span class="meta-txt">Meta: 5,500</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>78.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:78.78787878787878%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>52 Clientes</span> <span class="meta-txt">Meta: 66</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 14</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MONDELEZ</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>42.8%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:42.812295341713316%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 4,053.04</span> <span class="meta-txt">Meta: 9,467</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 5,413.96</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>51.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:51.28205128205128%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>40 Clientes</span> <span class="meta-txt">Meta: 78</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 38</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">PURINA RACAO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>30.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:30.0086%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,000.86</span> <span class="meta-txt">Meta: 10,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 6,999.14</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>16.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>5 Clientes</span> <span class="meta-txt">Meta: 30</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 25</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS MIX</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>123.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 6,795.14</span> <span class="meta-txt">Meta: 5,500</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>52.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:52.5%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>21 Clientes</span> <span class="meta-txt">Meta: 40</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 19</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">M DIAS ATACADO</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>191.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 5,211.32</span> <span class="meta-txt">Meta: 2,716</span></div>
+                <div class="falta-txt"><span style="color:#4ade80; font-size:0.65rem; font-weight:bold;">✔ OK</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>88.9%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:88.88888888888889%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>16 Clientes</span> <span class="meta-txt">Meta: 18</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 2</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">MARIZA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>12.5%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:12.498823529411764%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 424.96</span> <span class="meta-txt">Meta: 3,400</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 2,975.04</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>10.0%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>6 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 54</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">FONTANA</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>27.6%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:27.649436957725676%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 1,497.77</span> <span class="meta-txt">Meta: 5,417</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 3,919.23</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>16.7%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>10 Clientes</span> <span class="meta-txt">Meta: 60</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 50</span></div>
+        </div>
+            <div class="depto-box">
+                <div style="font-weight:bold; color:#38bdf8; font-size:0.9rem; margin-bottom:5px;">CALCADOS</div>
+
+                <div class="label-mini"><span>💰 Financeiro</span> <span>18.3%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:18.314055555555555%; background:#0ea5e9;"></div></div>
+                <div class="valor-mini"><span>R$ 3,296.53</span> <span class="meta-txt">Meta: 18,000</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: R$ 14,703.47</span></div>
+
+                <div class="label-mini"><span>👥 Positivação</span> <span>22.2%</span></div>
+                <div class="barra-bg"><div class="barra-fill" style="width:22.22222222222222%; background:#10b981;"></div></div>
+                <div class="valor-mini"><span>12 Clientes</span> <span class="meta-txt">Meta: 54</span></div>
+                <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 42</span></div>
+        <div class="secao-container">
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC IPANEMA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>2 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 10</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>4.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.666666666666667%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>7 / 150</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 143</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC MASCULINO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>50.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:50.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>6 / 12</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>23.5%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:23.52941176470588%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>100 / 425</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 325</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC CLASSICA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.5%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.5%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>1 / 200</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 199</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FEMININA</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>0 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 6</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>0.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>0 / 25</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 25</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC LICENCIADOS KIDS</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>20.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:20.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>6 / 30</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 24</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC FOCO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>10.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>2 / 20</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 18</span></div>
+                    </div>
+                
+                    <div style="margin-bottom:15px; border-bottom: 1px solid #334155; padding-bottom:5px;">
+                        <div style="font-size:0.75rem; color:#f8fafc; font-weight:bold;">📍 CALC BEIRA RIO</div>
+
+                        <div class="label-mini"><span>Positivação</span> <span>16.7%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:16.666666666666664%; background:#10b981;"></div></div>
+                        <div class="valor-mini"><span>1 / 6</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 5</span></div>
+
+                        <div class="label-mini"><span>Pares</span> <span>2.0%</span></div>
+                        <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.0%; background:#f59e0b;"></div></div>
+                        <div class="valor-mini"><span>1 / 50</span></div>
+                        <div class="falta-txt"><span style="color:#f87171; font-size:0.65rem;">Falta: 49</span></div>
+                    </div>
+                </div></div></div></div></body></html>
