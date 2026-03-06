@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; padding: 10px; margin: 0; }
-        h1 { text-align:center; color: #94a3b8; font-size: 1.4rem; margin: 15px 0; }
+        h1 { text-align:center; color: #94a3b8; font-size: 1.4rem; margin: 15px 0 5px 0; }
+
+        /* Estilo da Barra de Pesquisa */
+        .search-container {
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            padding: 10px 0;
+            z-index: 100;
+            margin-bottom: 15px;
+        }
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            background: #1e293b;
+            color: white;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #searchInput:focus { border-color: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.4); }
+
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 15px; }
         .card { background: #1e293b; border-radius: 12px; padding: 15px; border-top: 6px solid #334155; }
         .nome-vendedor { font-size: 1.2rem; font-weight: bold; color: #f8fafc; text-transform: uppercase; }
@@ -30,9 +53,14 @@
 </head>
 <body>
     <h1>🚀 PERFORMANCE RCA</h1>
-    <div class="grid">
 
-        <div class="card">
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="filterVendedores()" placeholder="Pesquisar vendedor por nome...">
+    </div>
+
+    <div class="grid" id="vendedoresGrid">
+
+        <div class="card card-vendedor">
             <div class="nome-vendedor">BURITICUPU: VITOR GABRIEL DA C SILVA</div>
             <small style="color: #64748b;">RCA: 2118</small>
 
@@ -55,12 +83,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 0</span></div>
@@ -68,12 +94,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (8.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.037894736842105%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,500</span> <span class="label-real">Real: 764</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,736.40</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (5.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 60</span> <span class="label-real">Real: 3</span></div>
@@ -81,12 +105,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (28.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:28.333448275862068%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 5,800</span> <span class="label-real">Real: 1,643</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,156.66</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (3.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.3333333333333335%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 1</span></div>
@@ -94,12 +116,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (14.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:14.88233618233618%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 17,550</span> <span class="label-real">Real: 2,612</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 14,938.15</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (6.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:6.666666666666667%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 60</span> <span class="label-real">Real: 4</span></div>
@@ -107,12 +127,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.591076923076923%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 38</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,461.58</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (2.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.2222222222222223%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 45</span> <span class="label-real">Real: 1</span></div>
@@ -120,12 +138,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (53.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:53.37458823529412%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 8,500</span> <span class="label-real">Real: 4,537</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,963.16</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (15.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:15.217391304347828%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 46</span> <span class="label-real">Real: 7</span></div>
@@ -133,12 +149,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (29.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:29.921764705882353%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 8,500</span> <span class="label-real">Real: 2,543</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,956.65</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (20.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:20.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15</span> <span class="label-real">Real: 3</span></div>
@@ -146,12 +160,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (5.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.7504%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 2,500</span> <span class="label-real">Real: 144</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 2,356.24</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (2.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.857142857142857%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 35</span> <span class="label-real">Real: 1</span></div>
@@ -159,12 +171,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (405.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:100%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,000</span> <span class="label-real">Real: 16,202</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-ok">✔ META OK</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (8.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 2</span></div>
@@ -172,12 +182,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (25.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:25.159599999999998%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15,000</span> <span class="label-real">Real: 3,774</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 11,226.06</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (7.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:7.5%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 40</span> <span class="label-real">Real: 3</span></div>
@@ -232,7 +240,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 50</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">IMPERATRIZ:DIOGO GUIMARAES SANTOS-FL3</div>
             <small style="color: #64748b;">RCA: 2121</small>
 
@@ -255,12 +263,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (10.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.4%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 300</span> <span class="label-real">Real: 31</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 268.80</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (11.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.11111111111111%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 1</span></div>
@@ -268,12 +274,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (10.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.822344827586207%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 7,250</span> <span class="label-real">Real: 785</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,465.38</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (17.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:17.5%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 80</span> <span class="label-real">Real: 14</span></div>
@@ -281,12 +285,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (23.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:23.250243902439024%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,100</span> <span class="label-real">Real: 953</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,146.74</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (20.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:20.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 35</span> <span class="label-real">Real: 7</span></div>
@@ -294,12 +296,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (22.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:22.29432%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,500</span> <span class="label-real">Real: 2,787</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,713.21</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (25.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:25.806451612903224%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 93</span> <span class="label-real">Real: 24</span></div>
@@ -307,12 +307,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (95.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:95.22323076923077%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 6,190</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 310.49</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (29.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:29.629629629629626%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 81</span> <span class="label-real">Real: 24</span></div>
@@ -320,12 +318,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 12,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 0</span></div>
@@ -333,12 +329,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (12.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:12.572461538461537%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 817</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,682.79</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (14.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:14.285714285714285%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 56</span> <span class="label-real">Real: 8</span></div>
@@ -346,12 +340,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (11.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.957384615384616%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 712</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,787.77</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (26.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:26.666666666666668%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 8</span></div>
@@ -359,12 +351,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.5612%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 2,500</span> <span class="label-real">Real: 14</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 2,485.97</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (3.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.225806451612903%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 31</span> <span class="label-real">Real: 1</span></div>
@@ -372,12 +362,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (22.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:22.384999999999998%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 400</span> <span class="label-real">Real: 90</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 310.46</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (8.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 2</span></div>
@@ -385,12 +373,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (2.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.1560833333333336%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,000</span> <span class="label-real">Real: 259</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 11,741.27</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.651162790697675%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 43</span> <span class="label-real">Real: 2</span></div>
@@ -445,7 +431,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 50</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">AMARANTE- ELIVALDO MARINHO BARROS-FL3</div>
             <small style="color: #64748b;">RCA: 2117</small>
 
@@ -468,12 +454,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (24.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:24.89%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 300</span> <span class="label-real">Real: 75</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 225.33</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (11.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.11111111111111%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 1</span></div>
@@ -481,12 +465,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (10.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.458842105263159%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,500</span> <span class="label-real">Real: 994</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,506.41</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 50</span> <span class="label-real">Real: 5</span></div>
@@ -494,12 +476,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (21.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:21.67646153846154%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 1,409</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,091.03</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (24.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:24.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 6</span></div>
@@ -507,12 +487,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (26.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:26.81304%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,500</span> <span class="label-real">Real: 3,352</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,148.37</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (28.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:28.846153846153843%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 52</span> <span class="label-real">Real: 15</span></div>
@@ -520,12 +498,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (3.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.1406315789473678%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,500</span> <span class="label-real">Real: 298</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,201.64</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (12.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:12.5%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 40</span> <span class="label-real">Real: 5</span></div>
@@ -533,12 +509,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (3.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.435%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 8,000</span> <span class="label-real">Real: 275</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 7,725.20</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (5.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20</span> <span class="label-real">Real: 1</span></div>
@@ -546,12 +520,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (6.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:6.235076923076923%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 405</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,094.72</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (8.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.571428571428571%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 35</span> <span class="label-real">Real: 3</span></div>
@@ -559,12 +531,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (38.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:38.86533333333333%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 2,332</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,668.08</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (50.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:50.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10</span> <span class="label-real">Real: 5</span></div>
@@ -572,12 +542,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (71.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:71.47071428571428%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 2,800</span> <span class="label-real">Real: 2,001</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 798.82</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (17.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:17.857142857142858%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 28</span> <span class="label-real">Real: 5</span></div>
@@ -585,12 +553,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (30.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:30.554%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 5,000</span> <span class="label-real">Real: 1,528</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,472.30</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (30.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:30.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20</span> <span class="label-real">Real: 6</span></div>
@@ -598,12 +564,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (1.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.5218596715717636%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 14,067</span> <span class="label-real">Real: 214</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 13,852.92</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.166666666666666%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 48</span> <span class="label-real">Real: 2</span></div>
@@ -658,7 +622,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 25</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">IMPERATRIZ:RHUDSON BARROS RAMALHO</div>
             <small style="color: #64748b;">RCA: 2116</small>
 
@@ -681,12 +645,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15</span> <span class="label-real">Real: 0</span></div>
@@ -694,12 +656,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (20.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:20.847555555555555%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,000</span> <span class="label-real">Real: 1,876</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 7,123.72</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (28.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:28.888888888888886%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 45</span> <span class="label-real">Real: 13</span></div>
@@ -707,12 +667,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (21.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:21.800232558139534%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,300</span> <span class="label-real">Real: 937</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,362.59</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (35.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:35.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20</span> <span class="label-real">Real: 7</span></div>
@@ -720,12 +678,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (25.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:24.97112%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,500</span> <span class="label-real">Real: 3,121</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,378.61</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (28.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:28.000000000000004%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 50</span> <span class="label-real">Real: 14</span></div>
@@ -733,12 +689,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (19.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:19.427516699871088%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 8,533</span> <span class="label-real">Real: 1,658</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,875.25</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (8.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.695652173913043%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 46</span> <span class="label-real">Real: 4</span></div>
@@ -746,12 +700,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15</span> <span class="label-real">Real: 0</span></div>
@@ -759,12 +711,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (3.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.515%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 211</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,789.10</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (2.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.857142857142857%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 35</span> <span class="label-real">Real: 1</span></div>
@@ -772,12 +722,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10</span> <span class="label-real">Real: 0</span></div>
@@ -785,12 +733,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 3,300</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,300.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 0</span></div>
@@ -798,12 +744,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 3,800</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,800.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20</span> <span class="label-real">Real: 0</span></div>
@@ -811,12 +755,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 13,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 13,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 36</span> <span class="label-real">Real: 0</span></div>
@@ -871,7 +813,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 50</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">P.FRANCO: IVANA CARLA DA SILVA-FL3</div>
             <small style="color: #64748b;">RCA: 2124</small>
 
@@ -894,12 +836,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 0</span></div>
@@ -907,12 +847,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (9.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:9.47978947368421%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,500</span> <span class="label-real">Real: 901</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,599.42</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (11.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 100</span> <span class="label-real">Real: 11</span></div>
@@ -920,12 +858,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (1.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.5132558139534882%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,300</span> <span class="label-real">Real: 65</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,234.93</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (3.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.6363636363636362%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 55</span> <span class="label-real">Real: 2</span></div>
@@ -933,12 +869,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (4.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.8689599999999995%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,500</span> <span class="label-real">Real: 609</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 11,891.38</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (9.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.974358974358974%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 78</span> <span class="label-real">Real: 7</span></div>
@@ -946,12 +880,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (23.6%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:23.55413541776698%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,467</span> <span class="label-real">Real: 2,230</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 7,237.13</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (18.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:18.666666666666668%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 75</span> <span class="label-real">Real: 14</span></div>
@@ -959,12 +891,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 10,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20</span> <span class="label-real">Real: 0</span></div>
@@ -972,12 +902,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (32.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:32.1135%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 1,927</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,073.19</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (15.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:15.517241379310345%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 58</span> <span class="label-real">Real: 9</span></div>
@@ -985,12 +913,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (14.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:14.438399999999998%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10,000</span> <span class="label-real">Real: 1,444</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,556.16</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 40</span> <span class="label-real">Real: 4</span></div>
@@ -998,12 +924,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (1.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.6544827586206896%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 2,900</span> <span class="label-real">Real: 48</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 2,852.02</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (3.3%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.3333333333333335%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 1</span></div>
@@ -1011,12 +935,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (2.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.4102083333333333%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,800</span> <span class="label-real">Real: 116</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,684.31</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 1</span></div>
@@ -1024,12 +946,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (4.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.056555555555556%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 18,000</span> <span class="label-real">Real: 730</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 17,269.82</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (3.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.9473684210526314%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 76</span> <span class="label-real">Real: 3</span></div>
@@ -1084,7 +1004,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 74</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">IMPERATRIZ:LUCIANA CARVALHO BARRETO-FL3</div>
             <small style="color: #64748b;">RCA: 2128</small>
 
@@ -1107,18 +1027,16 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (9.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.99351304347826%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 115,000</span> <span class="label-real">Real: 10,343</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 104,657.46</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (13.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:13.846153846153847%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 65</span> <span class="label-real">Real: 9</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 56</span></div>
         </div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">IMPERATRIZ: EVANDRO SILVA VITAL-FL3</div>
             <small style="color: #64748b;">RCA: 2115</small>
 
@@ -1141,12 +1059,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 300</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 300.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 0</span></div>
@@ -1154,12 +1070,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (10.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.677533333333331%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15,000</span> <span class="label-real">Real: 1,602</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 13,398.37</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (7.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:7.000000000000001%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 100</span> <span class="label-real">Real: 7</span></div>
@@ -1167,12 +1081,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (9.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:8.9956%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 7,500</span> <span class="label-real">Real: 675</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,825.33</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (7.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:7.5%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 40</span> <span class="label-real">Real: 3</span></div>
@@ -1180,12 +1092,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (11.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.854797136038185%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 20,950</span> <span class="label-real">Real: 2,484</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 18,466.42</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (7.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:7.142857142857142%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 140</span> <span class="label-real">Real: 10</span></div>
@@ -1193,12 +1103,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:9.998307692307693%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 650</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,850.11</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (5.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.714285714285714%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 35</span> <span class="label-real">Real: 2</span></div>
@@ -1206,12 +1114,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.9644%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15,000</span> <span class="label-real">Real: 595</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 14,405.34</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 3</span></div>
@@ -1219,12 +1125,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (3.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.747724137931034%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 14,500</span> <span class="label-real">Real: 543</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 13,956.58</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.878048780487805%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 41</span> <span class="label-real">Real: 2</span></div>
@@ -1232,12 +1136,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (2.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.926923076923077%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,500</span> <span class="label-real">Real: 190</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,309.75</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10</span> <span class="label-real">Real: 1</span></div>
@@ -1245,12 +1147,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 3,500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 28</span> <span class="label-real">Real: 0</span></div>
@@ -1258,12 +1158,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.492%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 30</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,970.48</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 1</span></div>
@@ -1271,12 +1169,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 25,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 76</span> <span class="label-real">Real: 0</span></div>
@@ -1331,7 +1227,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 30</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">ACAILANDIA: SARA HELI DE SOUSA LOPES-FL3</div>
             <small style="color: #64748b;">RCA: 2107</small>
 
@@ -1354,12 +1250,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 300</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 300.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9</span> <span class="label-real">Real: 0</span></div>
@@ -1367,12 +1261,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10,250</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 10,250.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 100</span> <span class="label-real">Real: 0</span></div>
@@ -1380,12 +1272,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 4,500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 4,500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 50</span> <span class="label-real">Real: 0</span></div>
@@ -1393,12 +1283,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 16,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 16,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 80</span> <span class="label-real">Real: 0</span></div>
@@ -1406,12 +1294,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 8,500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 50</span> <span class="label-real">Real: 0</span></div>
@@ -1419,12 +1305,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (18.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:18.82033580499446%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 11,733</span> <span class="label-real">Real: 2,208</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,524.81</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 3</span></div>
@@ -1432,12 +1316,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (15.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:15.206%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 12,500</span> <span class="label-real">Real: 1,901</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 10,599.25</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (1.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.5384615384615385%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 65</span> <span class="label-real">Real: 1</span></div>
@@ -1445,12 +1327,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (12.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:12.432%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 7,500</span> <span class="label-real">Real: 932</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 6,567.60</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 1</span></div>
@@ -1458,12 +1338,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 2,500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 2,500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 45</span> <span class="label-real">Real: 0</span></div>
@@ -1471,12 +1349,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 3,500</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,500.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 30</span> <span class="label-real">Real: 0</span></div>
@@ -1484,12 +1360,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 15,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 15,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 62</span> <span class="label-real">Real: 0</span></div>
@@ -1544,7 +1418,7 @@
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 50</span></div>
                     </div>
                 </div></div></div>
-        <div class="card">
+        <div class="card card-vendedor">
             <div class="nome-vendedor">ACAILANDIA: ELIZABETHE MELO CAMPOS-FL3</div>
             <small style="color: #64748b;">RCA: 2123</small>
 
@@ -1567,12 +1441,10 @@
     
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">LAMPADAS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 300</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 300.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6</span> <span class="label-real">Real: 0</span></div>
@@ -1580,12 +1452,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI ATAC</div>
-
                 <div class="info-row"><span>💰 Financeiro (11.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.359100000000002%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 10,000</span> <span class="label-real">Real: 1,136</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 8,864.09</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (7.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:7.777777777777778%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 90</span> <span class="label-real">Real: 7</span></div>
@@ -1593,12 +1463,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI GELATINA</div>
-
                 <div class="info-row"><span>💰 Financeiro (14.9%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:14.911833333333332%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 6,000</span> <span class="label-real">Real: 895</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,105.29</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (9.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:9.090909090909092%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 55</span> <span class="label-real">Real: 5</span></div>
@@ -1606,12 +1474,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">DORI SM</div>
-
                 <div class="info-row"><span>💰 Financeiro (11.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:11.43981818181818%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 16,500</span> <span class="label-real">Real: 1,888</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 14,612.43</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (10.5%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:10.526315789473683%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 95</span> <span class="label-real">Real: 10</span></div>
@@ -1619,12 +1485,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MONDELEZ</div>
-
                 <div class="info-row"><span>💰 Financeiro (4.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.1010526315789475%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 9,500</span> <span class="label-real">Real: 390</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 9,110.40</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.040404040404041%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 99</span> <span class="label-real">Real: 4</span></div>
@@ -1632,12 +1496,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">PURINA RACAO</div>
-
                 <div class="info-row"><span>💰 Financeiro (3.1%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:3.0779179952395923%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 22,267</span> <span class="label-real">Real: 685</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 21,581.64</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.444444444444445%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 45</span> <span class="label-real">Real: 2</span></div>
@@ -1645,12 +1507,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS MIX</div>
-
                 <div class="info-row"><span>💰 Financeiro (5.8%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.784827586206896%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 14,500</span> <span class="label-real">Real: 839</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 13,661.20</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (1.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.25%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 80</span> <span class="label-real">Real: 1</span></div>
@@ -1658,12 +1518,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">M DIAS ATACADO</div>
-
                 <div class="info-row"><span>💰 Financeiro (5.7%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:5.737181818181818%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 11,000</span> <span class="label-real">Real: 631</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 10,368.91</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (4.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:4.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 25</span> <span class="label-real">Real: 1</span></div>
@@ -1671,12 +1529,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CICOPAL</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 5,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 5,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 66</span> <span class="label-real">Real: 0</span></div>
@@ -1684,12 +1540,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">MARIZA</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 3,000</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 3,000.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 43</span> <span class="label-real">Real: 0</span></div>
@@ -1697,12 +1551,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">FONTANA</div>
-
                 <div class="info-row"><span>💰 Financeiro (1.4%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:1.44%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 7,500</span> <span class="label-real">Real: 108</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 7,392.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (2.2%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:2.2222222222222223%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 45</span> <span class="label-real">Real: 1</span></div>
@@ -1710,12 +1562,10 @@
         </div>
             <div class="depto-box">
                 <div style="font-weight:bold; color:#38bdf8; font-size:0.85rem; margin-bottom:8px;">CALCADOS</div>
-
                 <div class="info-row"><span>💰 Financeiro (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#0ea5e9;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 17,933</span> <span class="label-real">Real: 0</span></div>
                 <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: R$ 17,933.00</span></div>
-
                 <div class="info-row" style="margin-top:10px;"><span>👥 Positivação (0.0%)</span></div>
                 <div class="barra-bg" style="height:6px;"><div class="barra-fill" style="width:0.0%; background:#10b981;"></div></div>
                 <div class="info-row"><span class="label-meta">Meta: 47</span> <span class="label-real">Real: 0</span></div>
@@ -1769,4 +1619,28 @@
                         <div class="info-row"><span>Pares: 0.0%</span> <span>Meta: 25 | Real: 0</span></div>
                         <div class="info-row" style="justify-content:flex-end;"><span class="label-falta">Falta: 25</span></div>
                     </div>
-                </div></div></div></div></body></html>
+                </div></div></div>
+    </div>
+
+    <script>
+    function filterVendedores() {
+        var input = document.getElementById('searchInput');
+        var filter = input.value.toUpperCase();
+        var grid = document.getElementById('vendedoresGrid');
+        var cards = grid.getElementsByClassName('card-vendedor');
+
+        for (var i = 0; i < cards.length; i++) {
+            var nome = cards[i].getElementsByClassName('nome-vendedor')[0];
+            if (nome) {
+                var txtValue = nome.textContent || nome.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>
